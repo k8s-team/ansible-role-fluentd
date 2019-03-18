@@ -1,0 +1,14 @@
+---
+# defaults file for elasticsearch
+
+destFolder: "{{ ansible_env.HOME }}/.k8s-team/fluentd"
+state: present
+
+releaseName:  fluentd
+
+elasticsearch:
+  host: elasticsearch-service
+  port: 9200
+  scheme: http
+  ssl:
+    verify: false
